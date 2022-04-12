@@ -78,6 +78,12 @@ variable "custom_shell_commands" {
   default     = []
 }
 
+variable "aws_profile" {
+  description = "Additional commands to run on the EC2 instance, to customize the instance, like installing packages"
+  type        = string
+  default     = "aws-02-im7"
+}
+
 source "amazon-ebs" "githubrunner" {
   ami_name                    = "github-runner-amzn2-x86_64-${formatdate("YYYYMMDDhhmm", timestamp())}"
   instance_type               = var.instance_type
