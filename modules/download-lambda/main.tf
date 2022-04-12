@@ -1,3 +1,9 @@
+/*
+*  _ __ ___   __ _(_)_ __
+* | '_ ` _ \ / _` | | '_ \
+* | | | | | | (_| | | | | |
+* |_| |_| |_|\__,_|_|_| |_|
+*/
 resource "null_resource" "download" {
   count = length(var.lambdas)
 

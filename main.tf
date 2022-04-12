@@ -1,3 +1,9 @@
+/*
+*  _ __ ___   __ _(_)_ __
+* | '_ ` _ \ / _` | | '_ \
+* | | | | | | (_| | | | | |
+* |_| |_| |_|\__,_|_|_| |_|
+*/
 locals {
   tags = merge(var.tags, {
     Environment       = var.environment,
