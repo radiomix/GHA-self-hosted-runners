@@ -10,4 +10,19 @@ variable "lambdas" {
     name = string
     tag  = string
   }))
+  // download from: https://github.com/philips-labs/terraform-aws-github-runner/releases
+  default = [
+    {
+      name = "runners"
+      tag  = "v0.39.0"
+    },
+    {
+      name = "runner-binaries-syncer"
+      tag  = "v0.39.0"
+    },
+    {
+      name = "webhook"
+      tag  = "v0.39.0"
+    }
+  ]
 }
