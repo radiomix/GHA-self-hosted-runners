@@ -1,3 +1,11 @@
+/*                         _
+ *   ___  _   _ _ __  _   _| |_ ___
+ *  / _ \| | | | '_ \| | | | __/ __|
+ * | (_) | |_| | |_) | |_| | |_\__ \
+ *  \___/ \__,_| .__/ \__,_|\__|___/
+ *             |_|
+ * Ouput variables
+ */
 output "runners" {
   value = {
     launch_template_name    = module.runners.launch_template.name
