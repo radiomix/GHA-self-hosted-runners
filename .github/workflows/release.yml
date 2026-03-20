@@ -21,7 +21,7 @@ jobs:
         env:
           LAMBDA: ${{ matrix.lambda }}
         run: echo ::set-output name=name::${LAMBDA##*/}
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Add zip
         run: apt update && apt install zip
       - name: Build dist
@@ -39,7 +39,7 @@ jobs:
     needs:
       prepare
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
@@ -57,7 +57,7 @@ jobs:
           path: artifacts
 
       - name: Get installation token
-        uses: npalm/action-app-token@v1.0.0
+        uses: npalm/action-app-token@v1.1.0
         id: app-token
         with:
           appId: ${{ secrets.FOREST_RELEASER_APP_ID }}
@@ -92,7 +92,7 @@ jobs:
 
     steps:
       - name: Generate provenance for release
-        uses: philips-labs/slsa-provenance-action@v0.7.2
+        uses: philips-labs/slsa-provenance-action@v0.8.0
         with:
           artifact_path: release-assets
           output_path: 'build.provenance'
